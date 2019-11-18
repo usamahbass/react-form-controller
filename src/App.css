@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+
+.login-input-container {
+  max-width: 400px;
+  position: absolute;
+  font-family: 'Nunito', sans-serif;
+	top: 60%;
+  left: 52%;
+	margin-left: -250px;
+  margin-top: -286px;
+  border: 1px solid #ccc;
+}
+
+.login-input-content {
+  background: #fff;
+  padding: 25px 25px;
+}
+
+.login-input-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  bottom: 20px;
+  font-size: 25px;
+}
+
+.login-form .input-content {
+  margin-top: 15px;
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+
+.login-form .input-content-two {
+  margin-bottom: 20px;
+}
+
+.login-form .input-content input {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 350px;
+  height: 30px;
+  outline: none;
+}
+
+.login-form .input-content input::placeholder {
+  position: relative;
+  left: 10px;
+}
+
+.login-form a {
+  text-decoration: none;
+}
+
+/* load */
+
+.load {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 40px;
+  display: none;
+  align-items: center;
+}
+
+.items {
+  width: 6px;
+  height: 40px;
+  background: #4e73df;
+  margin: 0 3px;
+  border-radius: 10px;
+  animation: load 0.8s infinite;
+}
+
+.items:nth-child(2){
+  animation-delay: 0.2s;
+}
+
+.items:nth-child(4) {
+  animation-delay: 0.2s;
+}
+.items:nth-child(6) {
+  animation-delay: 0.2s;
+}
+
+@keyframes load {
+  0% {
+      height: 0;
+  }
+  50% {
+      height: 40px;
+  }
+  100% {
+      height: 0;
+  }
+}
+
+/* alert and notification */
+
+#notification-success {
+	position: absolute;
+	top: 30%;
+	left: -10%;
+	width: 500px;
+	height: 170px;
+	overflow: hidden;
+	text-align: center;
+	transform: translate(0%, 0%);
+	z-index: 1000;
+	background: #fff;
+	box-shadow: 0 0 20px #ccc;
+	border-radius: 10px;
+	color: #4e73df;
+	display: none;
+	animation: muncul 10s alternate;
+}
+
+@keyframes muncul {
+	0% {
+		height: 0px;
+	}
+	40% {
+		height: 170px;
+	}
+	100% {
+		height: 170px;
+	}
+}
+
+#notification-success .click {
+  position: relative;
+  top: 40px;
+	color: #4e73df;
+	border: 1px solid #4e73df;
+	padding: 7px 14px;
+	border-radius: 5px;
+	cursor: pointer; 
+}
+
+#notification-success .close {
+	border: 1px solid #4e73df;
+}
+
+#notification-success .close:hover {
+	background: #4e73df;
+	color: #fff;
+}
+
+
+#notification {
+  position: relative;
+  bottom: 30px;
+  text-align: center;
+  color: #4e73df;
+}
